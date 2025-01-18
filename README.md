@@ -31,7 +31,7 @@ __MVPリリース時__
 　・会員登録、ログイン    
   ・投稿機能（一週間の献立、買い物リスト、予算、人数）  
   ・検索機能（予算、人数からの絞り込み)  
-  ・献立、リストのお気に入り登録機能   
+  ・献立、買い物リストのお気に入り登録機能   
  
 __本リリースまで__  
 
@@ -39,9 +39,9 @@ __本リリースまで__
 
 ### ■ 機能の実装方針予定
 　・バックエンド: Ruby on Rails  
-　・フロントエンド：JavaScript　Tailwind CSS  
+　・フロントエンド：JavaScript,Daisy UI,Tailwind CSS  
 　・環境構築：Docker  
-　・DB：My SQL  
-　・インフラ：Heroku?  
-　・その他 　　gem 'sorcery' （ユーザー認証）     
+　・DB：PostgreSQL  
+　・インフラ：Render 
+　・その他 　　gem 'sorcery' （ユーザー認証）,'ransack'（検索）     
 　　open AI API  
