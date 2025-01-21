@@ -48,5 +48,8 @@ __本リリースまで__
 　・インフラ：Render 
 　・その他　　gem 'sorcery' （ユーザー認証）,'ransack'（検索）     
 　　open AI API（GPT-3.5を使用。初期段階は無料枠を利用する。入力フォームを使用して、トークン数を抑え、使用回数に制限を加える。）
-### ■ 機能の実装方針予定
+### ■ 画面遷移図
 https://www.figma.com/design/oGrHiBEpLJaUlhhFNlPPjB/Untitled?t=OVCOUDokIM5fK5mz-1
+
+### ■ ER図
+https://app.diagrams.net/?libs=general;er#
