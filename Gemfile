@@ -1,4 +1,6 @@
 source "https://rubygems.org"
+# ログイン認証
+gem 'devise'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.1"
