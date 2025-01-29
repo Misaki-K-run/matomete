@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  root 'static_pages#top'
+  root "static_pages#top"
+  resources :posts, only: %i[index]
 end
