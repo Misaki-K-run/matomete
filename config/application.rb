@@ -26,5 +26,8 @@ module Myapp
 
     # app/assets/imagesがアセットパスに含める
     config.assets.paths << Rails.root.join("app", "assets", "images")
+
+    # i18n
+    config.i18n.default_locale = :ja
   end
 end

@@ -8,7 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[8.0]
       t.string :encrypted_password, null: false, default: ""
 
       ## 名前を保存するためのカラム
-      t.string :name
+      t.string :name, null: false, default: ""
 
       ## Recoverable
       t.string   :reset_password_token
