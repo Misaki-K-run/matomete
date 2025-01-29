@@ -32,8 +32,13 @@
       <li><a>利用規約</a></li>
       <li><a>プライバシーポリシー</a></li>
       <li><a>お問い合わせ</a></li>
-      <li><a>ログイン</a></li>
-      <li><a>新規登録</a></li>
+      <li></li>
+      <% if user_signed_in? %>
+      <li> <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <li><%= link_to "ログイン", new_user_session_path %></li>
+      <% end %>
     </ul>
   </div>
 </div>
