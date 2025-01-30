@@ -25,7 +25,6 @@ default: &default
 development:
   <<: *default
   database: myapp_development
-  host: dpg-cudfkhggph6c73a0kegg-a
   username: postgres
   password: password
 
@@ -89,7 +88,6 @@ production:
     database: myapp_production
     username: myapp
     password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
-    host: <%= ENV["DATABASE_HOST"] || "localhost" %> #renderように追加なくてもいい
   cache:
     <<: *primary_production
     database: myapp_production_cache
