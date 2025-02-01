@@ -14,11 +14,13 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - mynetwork
   web:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    command: bash -c "sleep 10 && bundle install && bundle exec rails db:prepare && rm -f tmp/pids/server.pid && ./bin/dev"
+    command: bash -c "bundle install && bundle exec rails db:prepare && rm -f tmp/pids/server.pid && ./bin/dev"
     tty: true
     stdin_open: true
     volumes:
@@ -32,8 +34,14 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    networks:
+      - mynetwork
 
 volumes:
   bundle_data:
   postgresql_data:
   node_modules:
+
+networks:
+  mynetwork:  # ここでネットワークを定義
+    driver: bridge
