@@ -14,8 +14,6 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    networks:
-      - mynetwork
   web:
     build:
       context: .
@@ -34,14 +32,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    networks:
-      - mynetwork
-
 volumes:
   bundle_data:
   postgresql_data:
   node_modules:
-
-networks:
-  mynetwork:  # ここでネットワークを定義
-    driver: bridge
